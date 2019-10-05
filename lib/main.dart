@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+  // This widget is the root of your application... this builds the actual program
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -58,6 +58,10 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+
+  /*
+  THIS IS WHAT WE NEED TO TOUCH TO CHANGE THE STUFF ON THE UI
+   */
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
