@@ -1,6 +1,7 @@
 # masago
 
-Masago shit started during HackTheU 2019
+Kind of like Tinder and other dating apps, you swipe left and right on questions regarding the foods the user wants to eat, gives photos of the food and the options to get the food:
+
 
 ## Getting Started
 
