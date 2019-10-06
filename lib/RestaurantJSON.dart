@@ -8,10 +8,10 @@ class RestaurantJSON {
   final int price_level;
   final double rating;
 
-  Post({this.formatted_address, this.name, this.price_level, this.rating});
+  RestaurantJSON({this.formatted_address, this.name, this.price_level, this.rating});
 
-  factory Post.fromJson(Map<String, dynamic> json) {
-    return Post(
+  factory RestaurantJSON.fromJson(Map<String, dynamic> json) {
+    return RestaurantJSON(
       formatted_address: json['formatted_address'],
       name: json['name'],
       price_level: json['price_level'],
