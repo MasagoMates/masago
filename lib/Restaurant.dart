@@ -1,5 +1,6 @@
 class Restaurant {
   String restaurantName;
+  String restaurantAddress;
   int rating;
   double costRating;
   double distance;
@@ -16,9 +17,10 @@ class Restaurant {
   <param name="_meals">the meals that the restaurant serves</param>
   <param name="_authentic">the name of the restaurant</param>
    */
-  Restaurant(String _restaurantName, int _rating, double _priceRating,
+  Restaurant(String _restaurantName, String _restaurantAddress, int _rating, double _priceRating,
       double _distance, List<String> _meals, bool _authentic) {
     restaurantName = _restaurantName;
+    restaurantAddress = _restaurantAddress;
     if (_rating > 0 && _rating < 6) {   //checks if the rating is valid kind of redundant since the user isn't putting in the inputs
       rating = _rating;
     }

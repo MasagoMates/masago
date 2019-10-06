@@ -1,6 +1,6 @@
 import 'dart:collection';
 import 'package:masago/Restaurant.dart';
-import 'Food.dart';
+import 'Card.dart';
 
 class User{
   double totalPriceRatings;
@@ -24,7 +24,7 @@ class User{
   /*
   When the user swipes right on a card, the type of cusine that the food they selected is recorded.
    */
-  void swipedRight(Food cardChosenByUser, ){
+  void swipedRight(Card cardChosenByUser, ){
     cusinePreference[cardChosenByUser.cusineType] += 1;
     totalSwipeRights++;
   }
