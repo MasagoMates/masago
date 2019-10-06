@@ -1,7 +1,10 @@
+import 'package:flutter/material.dart';
+
 import 'Restaurant.dart';
 
 class Delivery {
   String deliveryOptionName;
+  String imageFilename;
   Restaurant restaurantOption;
   double estimatedDeliveryPrice;
   double deliveryTime;
@@ -15,14 +18,13 @@ class Delivery {
   <param name="_deliveryPrice">the estimated cost to get the food delivered</param>
   <param name="_deliveryTime">the estimated time it will take for a delivery</param>
    */
-Delivery(String _deliveryOptionName, Restaurant _restaurantOption, double _deliveryPrice, double _deliveryTime) {
+Delivery(String _deliveryOptionName, String _imageFilename, Restaurant _restaurantOption, double _deliveryPrice, double _deliveryTime) {
   deliveryOptionName = _deliveryOptionName;
+  imageFilename = _imageFilename;
   restaurantOption = _restaurantOption;
   estimatedDeliveryPrice = _deliveryPrice;
   deliveryTime = _deliveryTime;
 }
-
-
 
 
 

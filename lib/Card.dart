@@ -17,7 +17,7 @@ class Card {
     <param name="_deliveryOptions">the delivery options that will deliver the food to the user</param>
     <param name="_cusineType">the type of cusine </param>
    */
-  Food(String imageFilename, String _description, List<Restaurant> _restaurants, List<Delivery> _deliveryOptions, String _cusineType)
+  Card(String imageFilename, String _description, List<Restaurant> _restaurants, List<Delivery> _deliveryOptions, String _cusineType)
   {
     image = imageFilename;
     description = _description;
