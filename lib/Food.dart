@@ -6,16 +6,18 @@ class Food {
   String description;
   List<Restaurant> restaurants;
   List<Delivery> deliveryOptions;
+  String cusineType;
 
   /*
   Food object constructor
    */
-  Food(String imageFilename, String _description, List<Restaurant> _restaurants, List<Delivery> _deliveryOptions)
+  Food(String imageFilename, String _description, List<Restaurant> _restaurants, List<Delivery> _deliveryOptions, String _cusineType)
   {
     image = imageFilename;
     description = _description;
     _restaurants.forEach((element) => restaurants.add(element));
     _deliveryOptions.forEach((element) => deliveryOptions.add(element));
+    cusineType = _cusineType;
   }
 
 
