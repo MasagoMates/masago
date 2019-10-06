@@ -9,7 +9,13 @@ class Food {
   String cusineType;
 
   /*
-  Food object constructor
+  Food object constructor.
+
+    <param name="imageFilename">the filename of the image of the food</param>
+    <param name="_description">a short description of the food</param>
+    <param name="_restaurants">the restaurants that serve the type of food</param>
+    <param name="_deliveryOptions">the delivery options that will deliver the food to the user</param>
+    <param name="_cusineType">the type of cusine </param>
    */
   Food(String imageFilename, String _description, List<Restaurant> _restaurants, List<Delivery> _deliveryOptions, String _cusineType)
   {
