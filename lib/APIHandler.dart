@@ -30,24 +30,23 @@ class APIHandler{
     foods.add("pizza");
     foods.add("sushi");
     foods.add("ramen");
-    foods.add("italian food");
+    foods.add("italian_food");
     foods.add("pasta");
     foods.add("salad");
     foods.add("sandwich");
-    foods.add("American BBQ");
+    foods.add("American_BBQ");
     foods.add("pho");
     foods.add("tacos");
-    foods.add("ice cream");
+    foods.add("ice_cream");
     foods.add("dumplings");
-    foods.add("chinese food");
+    foods.add("chinese_food");
     foods.add("bread");
     foods.add("steak");
-    foods.add("fried chicken");
+    foods.add("fried_chicken");
     foods.add("lobster");
     foods.add("milkshake");
     foods.add("smoothie");
     foods.add("burrito");
-    foods.add("vegan");
     foods.add("coffee");
   }
 
