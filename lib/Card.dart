@@ -26,9 +26,13 @@ class Card {
     cusineType = _cusineType;
   }
 
+  void addRestaurant(Restaurant restaurant){
+    restaurants.add(restaurant);
+  }
 
-
-
+  void addDelivery(Delivery delivery){
+    deliveryOptions.add(delivery);
+  }
 
 
 

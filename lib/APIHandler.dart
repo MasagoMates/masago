@@ -20,6 +20,8 @@ class APIHandler{
     User user = new User();
     cards = new Queue<Card>();
     List<String> foods = createFoodsList();
+    Set<String> set = Set.from(foods);
+    set.forEach((element) => callGoogleMapsAPI(element));
   }
 
   List<String> createFoodsList(){
@@ -69,13 +71,6 @@ class APIHandler{
     }
   }
 
-
-  /*
-  Creates a restaurant and adds it into the card
-  */
-  void sortPlacesByFood(){
-
-  }
 
   /*
   Creates a card and adds it into the Queue of cards
