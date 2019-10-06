@@ -26,7 +26,31 @@ class Card {
     cusineType = _cusineType;
   }
 
+  /*
+  Creates a card THIS IS JUST A DEMO WHERE DELIVERY ISNT IMPLIMENTED SO IT IS HARD CODED.
+   */
+  Card.fromCard (String foodName, Restaurant restaurant){
+    image = foodName + ".jpg";
+    description = foodName;
+
+    restaurants = new List<Restaurant>();
+    restaurants.add(restaurant);
+
+    Delivery deliveryOption1 = new Delivery("UberEats", "UberEats.jpg", restaurant, 3.00 , 10);
+    Delivery deliveryOption2 = new Delivery("GrubHub", "GrubHub.jpg", restaurant, 6.00 , 5);
+    deliveryOptions = new List<Delivery>();
+    deliveryOptions.add(deliveryOption1);
+    deliveryOptions.add(deliveryOption2);
+
+    cusineType = getCusineType(foodName);
+  }
+
   void addRestaurant(Restaurant restaurant){
+    for(int i = 0; i < restaurants.length; i++){
+      if(restaurants[i].restaurantName.compareTo(restaurant.restaurantName) == 0){
+        return;
+      }
+    }
     restaurants.add(restaurant);
   }
 
@@ -34,167 +58,5 @@ class Card {
     deliveryOptions.add(delivery);
   }
 
-  /*
-  Creates a card and adds it into the Queue of cards
-   */
-  void createCard(String foodName, Restaurant restaurant)
-  {
-    String imageFilename = foodName + ".jpg";
-
-    List<Restaurant> restaurants = new List<Restaurant>();
-    restaurants.add(restaurant);
-
-
-    Delivery deliveryOption1 = new Delivery("UberEats", "UberEats.jpg", restaurant, 3.00 , 10);
-    Delivery deliveryOption2 = new Delivery("GrubHub", "GrubHub.jpg", restaurant, 6.00 , 5);
-    List<Delivery> deliveryOptions = new List<Delivery>();
-    deliveryOptions.add(deliveryOption1);
-
-    String cusineType = getCusineType(foodName);
-
-    Card currentCard = new Card(imageFilename, foodName, restaurants, deliveryOptions, cusineType);
-  }
-
-  String getCusineType(String foodName) {
-    switch(foodName){
-      case "burgers":
-        {
-          return "American";
-        }
-        break;
-
-      case "pizza":
-        {
-          return "Italian";
-        }
-        break;
-
-      case "sushi":
-        {
-          return "Japanese";
-        }
-        break;
-
-      case "ramen":
-        {
-          return "Japanese";
-        }
-        break;
-
-      case "italian food":
-        {
-          return "Italian";
-        }
-        break;
-
-      case "pasta":
-        {
-          return "Italian";
-        }
-        break;
-
-      case "salad":
-        {
-          return "American";
-        }
-        break;
-
-      case "sandwich":
-        {
-          return "American";
-        }
-        break;
-
-      case "American BBQ":
-        {
-          return "American";
-        }
-        break;
-
-      case "pho":
-        {
-          return "Vietnamese";
-        }
-        break;
-
-      case "tacos":
-        {
-          return "Mexican";
-        }
-        break;
-
-      case "ice cream":
-        {
-          return "American";
-        }
-        break;
-
-      case "dumplings":
-        {
-          return "Chinese";
-        }
-        break;
-
-      case "chinese food":
-        {
-          return "Chinese";
-        }
-        break;
-
-      case "bread":
-        {
-          return "American";
-        }
-        break;
-
-      case "steak":
-        {
-          return "American";
-        }
-        break;
-
-      case "fried chicken":
-        {
-          return "American";
-        }
-        break;
-
-      case "lobster":
-        {
-          return "American";
-        }
-        break;
-
-      case "milkshake":
-        {
-          return "American";
-        }
-        break;
-
-      case "smoothie":
-        {
-          return "American";
-        }
-        break;
-
-      case "burrito":
-        {
-          return "Mexican";
-        }
-        break;
-
-      case "coffee":
-        {
-          return "American";
-        }
-        break;
-
-      default:
-        {
-          return "American";
-        }
-        break;
-    }
-  }
 
 }

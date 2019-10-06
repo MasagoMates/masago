@@ -34,6 +34,7 @@ class Restaurant {
     restaurantAddress = input.formatted_address;
     rating = input.rating;
     priceLevel = input.price_level;
+    distance = null;
   }
 
 
