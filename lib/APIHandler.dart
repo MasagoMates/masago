@@ -58,6 +58,13 @@ class APIHandler{
     }
 
   Future<Post> fetchPost(String URL) async {
+    final response = await http.get(URL);
+
+    if (response.statusCode == 200) {
+
+    }else{
+      throw Exception('FAILED TO SEND/RECIEVE POST REQUEST');
+    }
   }
 
 

@@ -1,11 +1,10 @@
+import 'package:masago/RestaurantJSON.dart';
 class Restaurant {
   String restaurantName;
   String restaurantAddress;
-  int rating;
-  double costRating;
+  double rating;
+  int priceLevel;
   double distance;
-  List<String> meals;
-  bool authentic;
 
   /*<summary>
   Restaurant constructor that takes in all of the basic information that is needed.
@@ -17,18 +16,26 @@ class Restaurant {
   <param name="_meals">the meals that the restaurant serves</param>
   <param name="_authentic">the name of the restaurant</param>
    */
-  Restaurant(String _restaurantName, String _restaurantAddress, int _rating, double _priceRating,
-      double _distance, List<String> _meals, bool _authentic) {
+  Restaurant(String _restaurantName, String _restaurantAddress, double _rating, int _priceRating,
+      double _distance) {
     restaurantName = _restaurantName;
     restaurantAddress = _restaurantAddress;
     if (_rating > 0 && _rating < 6) {   //checks if the rating is valid kind of redundant since the user isn't putting in the inputs
       rating = _rating;
     }
     if (_priceRating > 0 && _priceRating < 5) {   //checks if the rating is valid kind of redundant since the user isn't putting in the inputs
-      costRating = _priceRating;
+      priceLevel = _priceRating;
     }
     distance = _distance;
-    _meals.forEach((element) => meals.add(element));
-    authentic = _authentic;
   }
+
+   Restaurant.fromRestaurant (RestaurantJSON input) {
+    restaurantName = input.name;
+    restaurantAddress = input.formatted_address;
+    rating = input.rating;
+    priceLevel = input.price_level;
+  }
+
+
+
 }

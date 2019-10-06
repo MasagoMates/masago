@@ -34,7 +34,7 @@ class User{
    */
   void pickedRestaurant(Restaurant restaurantChosenByUser)
   {
-    totalPriceRatings += restaurantChosenByUser.costRating;
+    totalPriceRatings += restaurantChosenByUser.priceLevel;
     totalDistance += restaurantChosenByUser.distance;
     transactions++;
   }
